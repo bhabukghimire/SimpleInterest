@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <style type="text/css">
+        .buttonss:hover {
+            background-color: black;
+            border-width: 4px;
+            border-radius: 200px;
+            border-style: dashed;
+            border-color: magenta;
+        }
+        
+        border-style: groove;
+        border-color: red;
+        border-radius: 20px;
+        text-align: center;
+        border-width: 1px;
+    </style>
+    <h1 style="background-color: lime; font-size: 50px; text-align: center;">SIMPLE INTEREST CALCULATION</h1>
+    <div style="font-size: 30px; text-align: center;" class="but">
+
+
+        <b>Enter Principal</b> <br>
+        <input type="number" id="p" style="text-align: center;border-radius: 200px;border-width: 2px;border-style: solid;"><br>
+        <b>Enter Rate </b> <br>
+        <input type="number" id="r" style="text-align: center;border-radius: 200px;border-width: 2px;border-style: solid;"><br>
+        <b>Enter Time</b> <br>
+        <input type="number" id="t" style="text-align: center;border-radius: 200px;border-width: 2px;border-style: solid;"><br>
+        <br>
+        </span>
+
+        <input type="button" name="but" class="buttonss" value="SIMPLE INTEREST" onclick="bhabuk()" style="font-size: 20px; font-family: cursive; color: magenta; border-style: solid;border-radius: 100px;border-color: lime;
+	border-width: 2px;">
+        <input type="button" name="but" class="buttonss" value="AMOUNT" onclick="bhabuks()" style="font-size: 20px; font-family: cursive;color: magenta; text-align: center ; size: 40px;border-width: 4px;
+		border-radius:  200px;
+		border-style: solid;
+		border-color: black;">
+        <input type="button" name="but" class="buttonss" value="RESET" onclick="bhabukss()" style="font-size: 20px; font-family: cursive;color: magenta; text-align: center ; size: 40px;border-width: 4px;
+		border-radius:  200px;
+		border-style: solid;
+		border-color: black;">
+        <h2 id="name"></h2>
+    </div>
+    <script type="text/javascript">
+        function bhabuk() {
+            var Principal = document.getElementById('p').value;
+            var Time = document.getElementById('t').value;
+            var Rate = document.getElementById('r').value;
+
+            var SI = Principal * Rate * Time / 100;
+
+            document.getElementById('name').innerHTML = SI;
+
+        }
+
+        function bhabuks() {
+            const Principal = document.getElementById('p').value;
+            const Time = document.getElementById('t').value;
+            const Rate = document.getElementById('r').value;
+
+            const X = (Principal * Rate * Time / 100)+Principal;
+
+            document.getElementById('name').innerHTML = X;
+
+        }
+
+        function bhabukss() {
+            var Principal = document.getElementById('p').value = "";
+            var Time = document.getElementById('t').value = "";
+            var Rate = document.getElementById('r').value = "";
+
+
+
+            document.getElementById('name').style.display = "none";
+
+        }
+    </script>
+</body>
+
+</html>
